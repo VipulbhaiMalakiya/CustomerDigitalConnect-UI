@@ -40,7 +40,8 @@
             ],
             "allowedCommonJsDependencies": [
               "xlsx",
-              "crypto-js"
+              "crypto-js",
+              "file-saver"
             ]
           },
           "configurations": {
