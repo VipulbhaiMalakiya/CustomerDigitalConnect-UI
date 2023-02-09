@@ -10,7 +10,6 @@ import { ViewCompanyComponent } from '../../components/view-company/view-company
 @Component({
   selector: 'app-company-list',
   templateUrl: './company-list.component.html',
-  styleUrls: ['./company-list.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CompanyListComponent implements OnInit {
@@ -26,7 +25,7 @@ export class CompanyListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.isProceess = false;
+    // this.isProceess = false;
   }
   onAdd() {
     this.isProceess = true;
