@@ -1,40 +1,44 @@
 <aside class="left-mainmenu">
   <ul>
-    <li routerLinkActive="active"><a routerLink="dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-      class="menu-list-title"><img src="../assets/images/menu-icon-1.png" alt="">
-      Dashboard</a>
-  </li>
-   <!-- <li><a href="inbox.html" class="menu-list-title"><img src="images/menu-icon-2.png" alt=""> Inbox</a></li>
+    <li routerLinkActive="active"><a routerLink="dashboard" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}" class="menu-list-title"><img src="../assets/images/menu-icon-1.png"
+          alt="">
+        Dashboard</a>
+    </li>
+    <!-- <li><a href="inbox.html" class="menu-list-title"><img src="images/menu-icon-2.png" alt=""> Inbox</a></li>
      -->
-   <li routerLinkActive="active">
-     <div class="accordion" id="menu-accordion">
+    <li routerLinkActive="active" *ngIf="isAdmin">
+      <div class="accordion" id="menu-accordion">
 
-      <div class="card-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><img src="../assets/images/menu-icon-3.png" alt=""> Master</div>
+        <div class="card-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+          aria-controls="collapseOne"><img src="../assets/images/menu-icon-3.png" alt=""> Master</div>
 
-      <div id="collapseOne" class="card-body-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#menu-accordion">
-        <ul class="inner-acc-menu">
-          <li class="inner-acc-active"><a [routerLink]="['/admin/master/company']"
-              routerLinkActive="active">Company</a></li>
-          <li><a [routerLink]="['/admin/master/department']" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact: true}">Department</a>
-          </li>
-          <li><a [routerLink]="['/admin/master/user']" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact: true}">User</a></li>
-          <li><a [routerLink]="['/admin/master/roles-permissions']" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact: true}">roles-permissions</a></li>
-          <li><a [routerLink]="['/admin/master/approval-matrix']" routerLinkActive="active"
+        <div id="collapseOne" class="card-body-collapse collapse" aria-labelledby="headingOne"
+          data-bs-parent="#menu-accordion">
+          <ul class="inner-acc-menu">
+            <li><a [routerLink]="['/admin/master/approval-matrix']" routerLinkActive="active"
               [routerLinkActiveOptions]="{exact: true}">Approval
               Matrix</a></li>
-          <li><a [routerLink]="['/admin/master/customers']" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact: true}">Customers</a>
-          </li>
-        </ul>
+            <li class="inner-acc-active"><a [routerLink]="['/admin/master/company']"
+                routerLinkActive="active">Company</a></li>
+            <li><a [routerLink]="['/admin/master/customers']" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">Customers</a>
+            </li>
+
+            <li><a [routerLink]="['/admin/master/department']" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">Department</a>
+            </li>
+            <li><a [routerLink]="['/admin/master/roles-permissions']" routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}">Roles Permissions</a></li>
+            <li><a [routerLink]="['/admin/master/user']" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">User</a></li>
+          </ul>
+        </div>
+
       </div>
+    </li>
 
-    </div>
-   </li>
-
-   <!-- <li><a href="inbox.html" class="menu-list-title"><img src="images/menu-icon-4.png" alt=""> Notifications</a></li>
+    <!-- <li><a href="inbox.html" class="menu-list-title"><img src="images/menu-icon-4.png" alt=""> Notifications</a></li>
    <li><a href="dashboard.html" class="menu-list-title"><img src="images/menu-icon-5.png" alt=""> Templates</a></li>
    <li><a href="inbox.html" class="menu-list-title"><img src="images/menu-icon-6.png" alt=""> Users</a></li>
    <li><a href="dashboard.html" class="menu-list-title"><img src="images/menu-icon-7.png" alt=""> Automation</a></li>
@@ -45,4 +49,4 @@
   </ul>
 
 
-  </aside>
+</aside>
