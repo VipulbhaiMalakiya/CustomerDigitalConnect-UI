@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ApprovalMatrixComponent } from './approval-matrix.component';
-
-const routes: Routes = [{ path: '', component: ApprovalMatrixComponent }];
+import { ApprovalMatrixListComponent } from './pages/approval-matrix-list/approval-matrix-list.component';
+const routes: Routes = [{ path: '', component: ApprovalMatrixListComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

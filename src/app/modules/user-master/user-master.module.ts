@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { UserMasterRoutingModule } from './user-master-routing.module';
-import { UserMasterComponent } from './user-master.component';
-
+import { UserListComponent } from './pages/user-list/user-list.component';
 
 @NgModule({
   declarations: [
-    UserMasterComponent
+    UserListComponent
   ],
   imports: [
     CommonModule,

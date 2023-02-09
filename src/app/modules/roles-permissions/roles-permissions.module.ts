@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RolesPermissionsRoutingModule } from './roles-permissions-routing.module';
-import { RolesPermissionsComponent } from './roles-permissions.component';
+import { RolePermissionsListComponent } from './pages/role-permissions-list/role-permissions-list.component';
 
 
 @NgModule({
   declarations: [
-    RolesPermissionsComponent
+    RolePermissionsListComponent
   ],
   imports: [
     CommonModule,

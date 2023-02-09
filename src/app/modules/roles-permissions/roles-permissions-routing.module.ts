@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RolesPermissionsComponent } from './roles-permissions.component';
+import { RolePermissionsListComponent } from './pages/role-permissions-list/role-permissions-list.component';
 
-const routes: Routes = [{ path: '', component: RolesPermissionsComponent }];
+const routes: Routes = [{ path: '', component: RolePermissionsListComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

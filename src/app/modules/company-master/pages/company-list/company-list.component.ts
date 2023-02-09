@@ -13,7 +13,6 @@ import { AddEditeCompanyComponent } from '../../components/add-edite-company/add
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CompanyListComponent implements OnInit {
-  title: any = 'Company';
   isProceess: boolean = true;
 
   constructor(
@@ -30,7 +29,7 @@ export class CompanyListComponent implements OnInit {
   }
   onAdd() {
     this.isProceess = true;
-    const modalRef = this.modalService.open(AddEditeCompanyComponent, { size: "lg" });
+    const modalRef = this.modalService.open(AddEditeCompanyComponent, { size: "md" });
     if (modalRef) {
       this.isProceess = false;
     } else {

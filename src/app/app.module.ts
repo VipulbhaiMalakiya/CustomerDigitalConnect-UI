@@ -24,6 +24,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DefoultComponent,
     ForgotPasswordComponent,
     SignUpComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,18 @@ select.ng-valid.ng-touched {
   border-color: green !important;
 }
 
+.check-detail-btn {
+  background: #E0FFD5;
+  border: 1px solid #9FEB74;
+  padding: 3px 4px;
+}
+
+.cross-detail-btn {
+  background: #FFD5D5;
+  border: 1px solid #FE9696;
+  padding: 3px 4px;
+  margin-left: 10px;
+}
 .btn.disabled,
 .btn:disabled,
 fieldset:disabled .btn {
@@ -39,8 +51,13 @@ button:not(:disabled) {
   cursor: pointer;
 }
 
+.form-validate-err {
+  font-size: 13px;
+  color: crimson;
+  margin-top: 3px;
+  /* display: none; */
+}
 /* Vipul Css End  */
-
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
 html {
@@ -174,17 +191,17 @@ span {
 }
 
 .common-btn {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   background: #00abc5;
   color: #fff;
-  padding: 15px 40px;
+  padding: 13px 25px;
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
   line-height: 1;
   border: 0;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 .common-btn:hover {
@@ -201,7 +218,7 @@ span {
 }
 
 .form-control {
-  border-radius: 10px;
+  border-radius: 6px;
   height: 45px;
   border-color: #cccccc;
   font-size: 14px;
@@ -209,6 +226,10 @@ span {
 
 select.form-control {
   padding: 10px;
+}
+
+textarea.form-control {
+  height: auto !important;
 }
 
 :focus {
@@ -245,7 +266,7 @@ select.form-control {
 }
 
 .login-logo img {
-  max-width: 100px;
+  max-width: 180px;
 }
 
 .login-form-col {
@@ -308,25 +329,20 @@ select.form-control {
 .login-user-ico img {
   max-height: 16px;
 }
-
-.form-validate-err {
-  font-size: 13px;
-  color: crimson;
-  margin-top: 3px;
-  /* display: none; */
-}
-
 .login-form .login-btn {
   width: 100%;
 }
 
 .forgot-txt {
-  color: #292929;
-  font-weight: 500;
   text-align: right;
 }
 
-.forgot-txt:hover {
+.forgot-txt a {
+  color: #292929;
+  font-weight: 500;
+}
+
+.forgot-txt a:hover {
   color: #00abc5;
 }
 
@@ -474,7 +490,6 @@ select.form-control {
 }
 
 .leftouter30 {
-  max-width: 18%;
   background: #f3fffc;
   min-height: 100vh;
   border-right: 1px solid #e9e9e9;
@@ -482,16 +497,16 @@ select.form-control {
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 230px;
 }
 
 .left-colapse .leftouter30 {
-  max-width: 5%;
+  max-width: 70px;
   overflow: hidden;
 }
 
 .rightouter70 {
-  width: calc(100% - 18%);
+  width: calc(100% - 230px);
   padding: 20px 30px;
   background: #fff;
   margin-left: auto;
@@ -499,13 +514,13 @@ select.form-control {
 }
 
 .left-colapse .rightouter70 {
-  width: calc(100% - 5%);
+  width: calc(100% - 70px);
 }
 
 .menu-tgl {
   position: fixed;
-  top: 15px;
-  left: 17%;
+  top: 17px;
+  left: 216px;
   background: #fff;
   padding: 5px 7px 5px 5px;
   border-radius: 20px;
@@ -526,21 +541,20 @@ select.form-control {
 }
 
 .left-colapse .menu-tgl {
-  left: 4%;
+  left: 56px;
   transform: scaleX(-1);
 }
 
 .left-colapse .main-logo {
-  width: 17px;
+  width: 20px;
   overflow: hidden;
-  height: 30px;
-  margin: 0px auto 29px;
+  height: 35px;
+  margin: 7px auto 24px;
   border: 0;
   padding: 0;
 }
 
 .left-colapse .main-logo img {
-  width: 95px;
   max-width: inherit;
 }
 
@@ -550,7 +564,7 @@ select.form-control {
   text-align: center;
 }
 
-.left-colapse .left-mainmenu .accordion-button {
+.left-colapse .left-mainmenu #menu-accordion .card-header {
   font-size: 0px;
   display: block;
   text-align: center;
@@ -560,13 +574,18 @@ select.form-control {
   padding: 12px 0px;
 }
 
+.left-colapse .left-mainmenu #menu-accordion.accordion .card-header.collapsed:after {
+  display: none;
+}
+
 .main-logo {
   padding: 0px 10px;
   margin-bottom: 20px;
+  margin-top: 5px;
 }
 
 .main-logo img {
-  max-width: 76%;
+  max-width: 96%;
 }
 
 .left-mainmenu ul {
@@ -646,23 +665,56 @@ select.form-control {
   padding: 12px 15px;
 }
 
-.left-mainmenu .accordion-button img {
+.left-mainmenu #menu-accordion .card-header img {
   margin-right: 10px;
   max-width: 20px;
 }
+
+.left-mainmenu li.active #menu-accordion .card-header img {
+  filter: brightness(0) invert(1);
+}
+
+#menu-accordion .card-header {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 15px;
+  line-height: 1;
+  color: #fff;
+}
+
+#menu-accordion.accordion .card-header.collapsed:after {
+  content: "+";
+  font-weight: 500;
+  font-size: 21px;
+}
+
+#menu-accordion.accordion .card-header::after {
+  content: "−";
+  font-weight: 500;
+  font-size: 21px;
+  top: 12px;
+  right: 10px;
+  position: absolute;
+  color: #fff;
+}
+
 
 .left-mainmenu ul {
   margin-bottom: 0;
 }
 
 .inner-acc-menu {
-  margin-top: 10px;
+  margin-top: 0px;
+  padding: 0 !important;
+  list-style: disc !important;
+  margin-left: 37px;
+  padding-bottom: 10px !important;
+  color: #fff;
 }
 
 .inner-acc-menu li a {
   padding: 0px 10px;
   font-size: 13px;
-  margin: 2px 10px;
 }
 
 .accordion-button::after {
@@ -684,9 +736,8 @@ select.form-control {
 
 
 .top-noti-user {
-  display: flex;
-  align-items: self-start;
-  margin-bottom: 20px;
+  display: inline-block;
+  float: right;
 }
 
 .top-notify {
@@ -723,6 +774,7 @@ select.form-control {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  color: #777;
 }
 
 .top-user-profile .dropdown-menu {
@@ -732,13 +784,15 @@ select.form-control {
 .top-user-profile .dropdown-menu a {
   color: #111;
   font-size: 13px;
-  padding: 6px 15px;
+  padding: 3px 15px;
   min-width: 200px;
+  display: block;
 }
 
 .top-user-profile .dropdown-menu a i {
   font-size: 20px;
   margin-right: 8px;
+  vertical-align: middle;
 }
 
 .page-title h1 {
@@ -749,6 +803,7 @@ select.form-control {
 .page-title {
   max-width: 85%;
   flex: 0 0 85%;
+  margin-bottom: 25px;
 }
 
 .page-btns-col {
@@ -765,7 +820,7 @@ select.form-control {
 }
 
 .gray-btns {
-  background: #f5f5f5;
+  background: #fff;
   border-radius: 5px;
   padding: 4px 10px;
   font-size: 13px;
@@ -776,6 +831,11 @@ select.form-control {
 .gray-btns i {
   font-size: 20px;
   vertical-align: bottom;
+}
+
+.gray-btns:hover {
+  border: 1px solid #999;
+  background: #f5f5f5;
 }
 
 .dt-buttons button {
@@ -812,6 +872,13 @@ select.form-control {
   font-size: 20px;
   vertical-align: bottom;
   margin-right: 5px;
+}
+
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-item:hover {
+  background: #00abc5;
+  color: #fff;
 }
 
 .table {
@@ -916,6 +983,55 @@ select.form-control {
 
 .tcol4 {
   width: 20%;
+}
+
+.modal-header {
+  background: #00abc5;
+}
+
+.modal-title {
+  font-size: 17px !important;
+  font-weight: 600;
+  color: #fff;
+}
+
+.common-modal-form .form-group {
+  margin-bottom: 15px;
+}
+
+.common-modal-form .form-control {
+  border-color: #818181;
+  height: 40px;
+}
+
+.common-modal-form .form-control:focus {
+  border-color: #00abc5;
+}
+
+.fmodal-ico {
+  font-size: 24px;
+  vertical-align: middle;
+  margin-right: 5px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.green-modal .modal-header {
+  background: #00abc5;
+}
+
+.green-modal .modal-title {
+  color: #fff;
+}
+
+.btn-close {
+  color: #fff !important;
+  opacity: 1;
+  filter: brightness(1) invert(1);
+}
+
+.common-modal-form {
+  padding: 5px;
 }
 
 /*------media css-------*/

@@ -5,6 +5,7 @@ import { CompanyMasterRoutingModule } from './company-master-routing.module';
 import { CompanyListComponent } from './pages/company-list/company-list.component';
 import { ViewCompanyComponent } from './components/view-company/view-company.component';
 import { AddEditeCompanyComponent } from './components/add-edite-company/add-edite-company.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { AddEditeCompanyComponent } from './components/add-edite-company/add-edi
   imports: [
     CommonModule,
     CompanyMasterRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class CompanyMasterModule { }

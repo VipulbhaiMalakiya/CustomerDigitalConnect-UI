@@ -7,6 +7,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LeftMainmenuComponent } from './components/left-mainmenu/left-mainmenu.component';
 import { ConfirmationDialogModalComponent } from './components/confirmation-dialog-modal/confirmation-dialog-modal.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -14,11 +15,14 @@ import { ConfirmationDialogModalComponent } from './components/confirmation-dial
     GoogleAccountComponent,
     LeftMainmenuComponent,
     ConfirmationDialogModalComponent,
+
   ],
   imports: [
     CommonModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+
+
   ],
   exports:[
     HeaderComponent,
@@ -27,7 +31,8 @@ import { ConfirmationDialogModalComponent } from './components/confirmation-dial
     AppRoutingModule,
     LeftMainmenuComponent,
     NgbModule,
-    ConfirmationDialogModalComponent
+    ConfirmationDialogModalComponent,
+
   ]
 })
 export class SharedModule { }
