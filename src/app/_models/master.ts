@@ -8,6 +8,10 @@ export interface CompanyMaster {
   ApiKey?: any
 }
 
+export interface ApprovalMatrixMaster{
+  Id?: any;
+}
+
 export interface Department {
   Id?: any;
   Company?: any;
@@ -50,7 +54,8 @@ export interface MasterResponseModel {
 }
 export interface SaveMasterBaseModel {
     Mode: "Insert" | "Update" | "Delete";
-    MasterName: "CompanyMaster" | "Department" | "User" | "Roles_Permissions" | "Customers" | "DeleteMasterModel";
+    MasterName: "CompanyMaster" | "Department" | "User" | "Roles_Permissions" | "Customers" | "DeleteMasterModel"
+    | "ApprovalMatrixMaster";
 }
 
 
