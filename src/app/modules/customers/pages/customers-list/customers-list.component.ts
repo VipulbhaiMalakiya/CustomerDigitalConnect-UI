@@ -19,7 +19,7 @@ export class CustomersListComponent {
     private toastr: ToastrService,
     private titleService: Title
   ) {
-    this.titleService.setTitle("CDC - Approval Matrix List");
+    this.titleService.setTitle("CDC - Customers List");
   }
 
   onAdd() {
