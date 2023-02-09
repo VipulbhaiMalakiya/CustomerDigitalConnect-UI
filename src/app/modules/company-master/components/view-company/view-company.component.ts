@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-view-company',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-company.component.css']
 })
 export class ViewCompanyComponent {
+  constructor(private activeModal: NgbActiveModal) { }
 
+  onCancel() {
+    this.activeModal.close(false);
+  }
 }

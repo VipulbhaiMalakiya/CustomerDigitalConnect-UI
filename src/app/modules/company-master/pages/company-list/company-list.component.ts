@@ -4,6 +4,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
 import { ConfirmationDialogModalComponent } from 'src/app/shared/components/confirmation-dialog-modal/confirmation-dialog-modal.component';
 import { AddEditeCompanyComponent } from '../../components/add-edite-company/add-edite-company.component';
+import { ViewCompanyComponent } from '../../components/view-company/view-company.component';
 
 
 @Component({
@@ -29,7 +30,17 @@ export class CompanyListComponent implements OnInit {
   }
   onAdd() {
     this.isProceess = true;
-    const modalRef = this.modalService.open(AddEditeCompanyComponent, { size: "md" });
+    const modalRef = this.modalService.open(AddEditeCompanyComponent, { size: "md", centered: true });
+    if (modalRef) {
+      this.isProceess = false;
+    } else {
+      this.isProceess = false;
+    }
+  }
+
+  onViewDetail() {
+    this.isProceess = true;
+    const modalRef = this.modalService.open(ViewCompanyComponent, { size: "lg", centered: true });
     if (modalRef) {
       this.isProceess = false;
     } else {
@@ -39,16 +50,14 @@ export class CompanyListComponent implements OnInit {
 
   onDelete() {
     this.isProceess = true;
-    const modalRef = this.modalService.open(ConfirmationDialogModalComponent, { size: "md", backdrop: "static" });
+    const modalRef = this.modalService.open(ConfirmationDialogModalComponent, { size: "sm", centered: true, backdrop: "static" });
     if (modalRef) {
       this.isProceess = false;
     }
     else {
       this.isProceess = false;
     }
-    var componentInstance =
-      modalRef.componentInstance as ConfirmationDialogModalComponent;
-    componentInstance.heading = "Delete Company";
-    componentInstance.message ="Are you sure you want to delete this Delete Company master?";
+    var componentInstance = modalRef.componentInstance as ConfirmationDialogModalComponent;
+    componentInstance.message = "Are you sure you want to delete this Delete Company master?";
   }
 }
