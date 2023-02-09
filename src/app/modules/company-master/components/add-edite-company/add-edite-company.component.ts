@@ -6,7 +6,6 @@ import { CompanyMaster } from 'src/app/_models/master';
 @Component({
   selector: 'app-add-edite-company',
   templateUrl: './add-edite-company.component.html',
-  styleUrls: ['./add-edite-company.component.css']
 })
 export class AddEditeCompanyComponent {
   private _companyMaster: CompanyMaster | undefined;

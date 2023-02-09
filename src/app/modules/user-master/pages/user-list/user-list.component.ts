@@ -6,8 +6,7 @@ import { AddUpdateUserComponent } from '../../components/add-update-user/add-upd
 
 @Component({
   selector: 'app-user-list',
-  templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.css']
+  templateUrl: './user-list.component.html'
 })
 export class UserListComponent {
   isProceess: boolean = true;

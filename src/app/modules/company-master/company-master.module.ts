@@ -6,18 +6,23 @@ import { CompanyListComponent } from './pages/company-list/company-list.componen
 import { ViewCompanyComponent } from './components/view-company/view-company.component';
 import { AddEditeCompanyComponent } from './components/add-edite-company/add-edite-company.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoadingSpinComponent } from 'src/app/shared/components/loading-spin/loading-spin.component';
+import { LoadingSpinPopupComponent } from 'src/app/shared/components/loading-spin-popup/loading-spin-popup.component';
 
 
 @NgModule({
   declarations: [
     CompanyListComponent,
     ViewCompanyComponent,
-    AddEditeCompanyComponent
+    AddEditeCompanyComponent,
+    LoadingSpinComponent,
+    LoadingSpinPopupComponent
   ],
   imports: [
     CommonModule,
     CompanyMasterRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ]
 })
 export class CompanyMasterModule { }

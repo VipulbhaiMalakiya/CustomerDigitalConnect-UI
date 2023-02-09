@@ -6,8 +6,7 @@ import { AddUpdateApprovalMatrixComponent } from '../../components/add-update-ap
 
 @Component({
   selector: 'app-approval-matrix-list',
-  templateUrl: './approval-matrix-list.component.html',
-  styleUrls: ['./approval-matrix-list.component.css']
+  templateUrl: './approval-matrix-list.component.html'
 })
 export class ApprovalMatrixListComponent {
   isProceess: boolean = true;

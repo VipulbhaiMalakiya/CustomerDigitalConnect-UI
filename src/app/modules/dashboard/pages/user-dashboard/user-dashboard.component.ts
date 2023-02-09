@@ -6,8 +6,7 @@ import { UserService } from '../../../../_api';
 import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-user-dashboard',
-  templateUrl: './user-dashboard.component.html',
-  styleUrls: ['./user-dashboard.component.css']
+  templateUrl: './user-dashboard.component.html'
 })
 export class UserDashboardComponent {
   loading = false;

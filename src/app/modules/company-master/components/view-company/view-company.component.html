@@ -5,6 +5,7 @@
       <button type="button" (click)="onCancel()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
+      <app-loading-spin-popup *ngIf="isProceess"></app-loading-spin-popup>
       <form class="common-modal-form" name="cform" method="post">
         <div class="row">
           <div class="form-group col-md-4">

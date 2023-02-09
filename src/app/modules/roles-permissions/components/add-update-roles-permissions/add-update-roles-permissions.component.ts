@@ -5,8 +5,7 @@ import { Roles_Permissions } from 'src/app/_models/master';
 
 @Component({
   selector: 'app-add-update-roles-permissions',
-  templateUrl: './add-update-roles-permissions.component.html',
-  styleUrls: ['./add-update-roles-permissions.component.css']
+  templateUrl: './add-update-roles-permissions.component.html'
 })
 export class AddUpdateRolesPermissionsComponent {
   private _rolesPermissionsMaster: Roles_Permissions | undefined;

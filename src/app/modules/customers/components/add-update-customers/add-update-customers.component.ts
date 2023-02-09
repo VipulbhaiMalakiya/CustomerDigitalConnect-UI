@@ -5,8 +5,7 @@ import { Customers } from 'src/app/_models/master';
 
 @Component({
   selector: 'app-add-update-customers',
-  templateUrl: './add-update-customers.component.html',
-  styleUrls: ['./add-update-customers.component.css']
+  templateUrl: './add-update-customers.component.html'
 })
 export class AddUpdateCustomersComponent {
   private _customersMaster: Customers | undefined;

@@ -6,8 +6,7 @@ import { AddEditeDepartmentMasterComponent } from '../../components/add-edite-de
 
 @Component({
   selector: 'app-department-list',
-  templateUrl: './department-list.component.html',
-  styleUrls: ['./department-list.component.css']
+  templateUrl: './department-list.component.html'
 })
 export class DepartmentListComponent {
 

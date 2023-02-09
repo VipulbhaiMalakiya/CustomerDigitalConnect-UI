@@ -19,11 +19,13 @@ select.ng-valid.ng-touched {
 .modal-sm {
   --bs-modal-width: 400px !important;
 }
+
 .check-detail-btn {
   background: #E0FFD5;
   border: 1px solid #9FEB74;
   padding: 3px 4px;
 }
+
 .cross-detail-btn {
   background: #FFD5D5;
   border: 1px solid #FE9696;
@@ -66,8 +68,10 @@ button:not(:disabled) {
   /* display: none; */
 }
 
+
+
 /* Vipul Css End  */
-/* @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"); */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
 html {
   scroll-behavior: smooth;
@@ -338,7 +342,6 @@ textarea.form-control {
 .login-user-ico img {
   max-height: 16px;
 }
-
 .login-form .login-btn {
   width: 100%;
 }
@@ -521,6 +524,7 @@ textarea.form-control {
   background: #fff;
   margin-left: auto;
   min-height: 100vh;
+  position: relative;
 }
 
 .left-colapse .rightouter70 {
@@ -1171,6 +1175,31 @@ textarea.form-control {
 #bulkcompany-modal .form-control {
   height: 34px;
 }
+
+.loading-spin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: rgb(255 255 255 / 80%);
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.loading-spin .d-flex {
+  height: 100%;
+  overflow: hidden;
+  align-items: center;
+}
+
+.spinner-border {
+  color: #00abc5;
+}
+
+
+
 
 
 

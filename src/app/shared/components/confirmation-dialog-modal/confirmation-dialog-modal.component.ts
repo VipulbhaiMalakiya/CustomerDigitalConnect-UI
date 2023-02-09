@@ -3,8 +3,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-confirmation-dialog-modal',
-  templateUrl: './confirmation-dialog-modal.component.html',
-  styleUrls: ['./confirmation-dialog-modal.component.css']
+  templateUrl: './confirmation-dialog-modal.component.html'
 })
 export class ConfirmationDialogModalComponent implements OnInit {
   heading: string = '';

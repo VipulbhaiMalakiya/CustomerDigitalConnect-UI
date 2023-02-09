@@ -6,8 +6,7 @@ import { AddUpdateRolesPermissionsComponent } from '../../components/add-update-
 
 @Component({
   selector: 'app-role-permissions-list',
-  templateUrl: './role-permissions-list.component.html',
-  styleUrls: ['./role-permissions-list.component.css']
+  templateUrl: './role-permissions-list.component.html'
 })
 export class RolePermissionsListComponent {
   isProceess: boolean = true;

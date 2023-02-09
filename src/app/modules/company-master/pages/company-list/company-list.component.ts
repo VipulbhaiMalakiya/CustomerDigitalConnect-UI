@@ -26,7 +26,7 @@ export class CompanyListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    this.isProceess = false;
   }
   onAdd() {
     this.isProceess = true;

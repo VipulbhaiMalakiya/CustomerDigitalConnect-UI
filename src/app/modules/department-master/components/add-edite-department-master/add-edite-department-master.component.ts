@@ -5,8 +5,7 @@ import { Department } from 'src/app/_models/master';
 
 @Component({
   selector: 'app-add-edite-department-master',
-  templateUrl: './add-edite-department-master.component.html',
-  styleUrls: ['./add-edite-department-master.component.css']
+  templateUrl: './add-edite-department-master.component.html'
 })
 export class AddEditeDepartmentMasterComponent {
   private _departmentMaster: Department | undefined;

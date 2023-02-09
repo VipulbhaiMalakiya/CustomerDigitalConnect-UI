@@ -4,8 +4,7 @@ import { User, Role } from '../../../_models';
 
 @Component({
   selector: 'app-left-mainmenu',
-  templateUrl: './left-mainmenu.component.html',
-  styleUrls: ['./left-mainmenu.component.css']
+  templateUrl: './left-mainmenu.component.html'
 })
 export class LeftMainmenuComponent implements OnInit {
   user?: User | null;

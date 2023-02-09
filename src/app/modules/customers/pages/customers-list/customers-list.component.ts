@@ -6,8 +6,7 @@ import { AddUpdateCustomersComponent } from '../../components/add-update-custome
 
 @Component({
   selector: 'app-customers-list',
-  templateUrl: './customers-list.component.html',
-  styleUrls: ['./customers-list.component.css']
+  templateUrl: './customers-list.component.html'
 })
 export class CustomersListComponent {
 

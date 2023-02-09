@@ -5,8 +5,7 @@ import { User } from 'src/app/_models';
 
 @Component({
   selector: 'app-add-update-user',
-  templateUrl: './add-update-user.component.html',
-  styleUrls: ['./add-update-user.component.css']
+  templateUrl: './add-update-user.component.html'
 })
 export class AddUpdateUserComponent {
   private _userMaster: User | undefined;

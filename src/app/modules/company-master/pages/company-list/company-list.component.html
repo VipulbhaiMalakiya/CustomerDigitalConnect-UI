@@ -1,4 +1,7 @@
-<div class="page-title"><h1>Company</h1></div>
+<app-loading-spin *ngIf="isProceess"></app-loading-spin>
+<div class="page-title">
+  <h1>Company</h1>
+</div>
 <div class="page-btns-col">
   <div class="dt-buttons">
     <button class="gray-btns" type="button"><i class="las la-file-csv"></i> CSV</button>
@@ -8,7 +11,7 @@
         required=""></div>
   </div>
   <div class="btn-group">
-    <button type="button"  class="add-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="add-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       Add New
     </button>
     <ul class="dropdown-menu">
@@ -16,10 +19,8 @@
       <li><a class="dropdown-item" href="#"><i class="las la-layer-group"></i> Bulk Upload</a></li>
     </ul>
   </div>
-
 </div>
-
-<div class="inner-middle-content">
+<div class="inner-middle-content" >
   <div class="dasboard-table">
     <div class="table-responsive">
       <table class="table">
@@ -32,7 +33,7 @@
             <th class="action-cl">Action</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody *ngIf="!isProceess">
 
           <tr>
             <td>#1cwg-er3f</td>
@@ -137,13 +138,10 @@
               <a href="#"><i class="las la-trash-alt"></i></a>
             </td>
           </tr>
-
         </tbody>
       </table>
-
     </div>
-
-    <div class="clearfix">
+    <div class="clearfix" *ngIf="!isProceess">
       <div class="hint-text">Showing <b>1</b> out of <b>10</b> entries</div>
       <ul class="pagination">
         <li class="page-item disabled"><a href="#"><i class="las la-angle-left"></i></a></li>
@@ -155,7 +153,5 @@
         <li class="page-item"><a href="#" class="page-link"><i class="las la-angle-right"></i></a></li>
       </ul>
     </div>
-
-
   </div>
 </div>

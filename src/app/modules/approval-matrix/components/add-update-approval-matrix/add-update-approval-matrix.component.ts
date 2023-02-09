@@ -5,8 +5,7 @@ import { ApprovalMatrixMaster } from 'src/app/_models/master';
 
 @Component({
   selector: 'app-add-update-approval-matrix',
-  templateUrl: './add-update-approval-matrix.component.html',
-  styleUrls: ['./add-update-approval-matrix.component.css']
+  templateUrl: './add-update-approval-matrix.component.html'
 })
 export class AddUpdateApprovalMatrixComponent {
   private _approvalMatrixMaster: ApprovalMatrixMaster | undefined;
