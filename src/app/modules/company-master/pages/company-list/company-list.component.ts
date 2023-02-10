@@ -2,6 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@
 import { Title } from '@angular/platform-browser';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
+import { BulkUploadComponent } from 'src/app/modules/shared/components/bulk-upload/bulk-upload.component';
 import { ConfirmationDialogModalComponent } from 'src/app/modules/shared/components/confirmation-dialog-modal/confirmation-dialog-modal.component';
 import { AddEditeCompanyComponent } from '../../components/add-edite-company/add-edite-company.component';
 import { ViewCompanyComponent } from '../../components/view-company/view-company.component';
@@ -36,6 +37,17 @@ export class CompanyListComponent implements OnInit {
       this.isProceess = false;
     }
   }
+
+  onbulkUpload(){
+    this.isProceess = true;
+    const modalRef = this.modalService.open(BulkUploadComponent, { size: "md", centered: true });
+    if (modalRef) {
+      this.isProceess = false;
+    } else {
+      this.isProceess = false;
+    }
+  }
+
 
   onViewDetail() {
     this.isProceess = true;
