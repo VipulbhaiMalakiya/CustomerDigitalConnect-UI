@@ -30,7 +30,7 @@ export class CompanyListComponent implements OnInit {
   }
   onAdd() {
     this.isProceess = true;
-    const modalRef = this.modalService.open(AddEditeCompanyComponent, { size: "md", centered: true });
+    const modalRef = this.modalService.open(AddEditeCompanyComponent, { size: "md", centered: true, backdrop: "static" });
     if (modalRef) {
       this.isProceess = false;
     } else {
@@ -38,20 +38,23 @@ export class CompanyListComponent implements OnInit {
     }
   }
 
-  onbulkUpload(){
+  onbulkUpload() {
     this.isProceess = true;
-    const modalRef = this.modalService.open(BulkUploadComponent, { size: "md", centered: true });
+    const modalRef = this.modalService.open(BulkUploadComponent, { size: "md", centered: true, backdrop: "static" });
     if (modalRef) {
       this.isProceess = false;
     } else {
       this.isProceess = false;
     }
+    var componentInstance = modalRef.componentInstance as BulkUploadComponent;
+    componentInstance.heading = "Company"
+    componentInstance.message = "Are you sure you want to delete this Delete Company master?";
   }
 
 
   onViewDetail() {
     this.isProceess = true;
-    const modalRef = this.modalService.open(ViewCompanyComponent, { size: "lg", centered: true });
+    const modalRef = this.modalService.open(ViewCompanyComponent, { size: "lg", centered: true, backdrop: "static" });
     if (modalRef) {
       this.isProceess = false;
     } else {
