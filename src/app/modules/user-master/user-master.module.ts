@@ -4,20 +4,18 @@ import { UserMasterRoutingModule } from './user-master-routing.module';
 import { UserListComponent } from './pages/user-list/user-list.component';
 import { AddUpdateUserComponent } from './components/add-update-user/add-update-user.component';
 import { ViewUserComponent } from './components/view-user/view-user.component';
-import { LoadingSpinPopupComponent } from 'src/app/shared/components/loading-spin-popup/loading-spin-popup.component';
-import { LoadingSpinComponent } from 'src/app/shared/components/loading-spin/loading-spin.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
     UserListComponent,
     AddUpdateUserComponent,
     ViewUserComponent,
-    LoadingSpinComponent,
-    LoadingSpinPopupComponent
   ],
   imports: [
     CommonModule,
-    UserMasterRoutingModule
+    UserMasterRoutingModule,
+    SharedModule
   ]
 })
 export class UserMasterModule { }

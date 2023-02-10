@@ -6,15 +6,12 @@ import { GoogleAccountComponent } from './components/google-account/google-accou
 import { AppRoutingModule } from '../app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LeftMainmenuComponent } from './components/left-mainmenu/left-mainmenu.component';
-import { ConfirmationDialogModalComponent } from './components/confirmation-dialog-modal/confirmation-dialog-modal.component';
 @NgModule({
   declarations: [
     HeaderComponent,
     LoginLeftsideComponent,
     GoogleAccountComponent,
-    LeftMainmenuComponent,
-    ConfirmationDialogModalComponent,
-  ],
+    LeftMainmenuComponent  ],
   imports: [
     CommonModule,
     AppRoutingModule,
@@ -26,8 +23,7 @@ import { ConfirmationDialogModalComponent } from './components/confirmation-dial
     GoogleAccountComponent,
     AppRoutingModule,
     LeftMainmenuComponent,
-    NgbModule,
-    ConfirmationDialogModalComponent,
+    NgbModule
 
   ]
 })

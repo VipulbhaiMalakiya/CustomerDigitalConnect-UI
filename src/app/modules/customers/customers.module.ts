@@ -4,20 +4,18 @@ import { CustomersRoutingModule } from './customers-routing.module';
 import { CustomersListComponent } from './pages/customers-list/customers-list.component';
 import { AddUpdateCustomersComponent } from './components/add-update-customers/add-update-customers.component';
 import { ViewCustomersComponent } from './components/view-customers/view-customers.component';
-import { LoadingSpinPopupComponent } from 'src/app/shared/components/loading-spin-popup/loading-spin-popup.component';
-import { LoadingSpinComponent } from 'src/app/shared/components/loading-spin/loading-spin.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
     CustomersListComponent,
     AddUpdateCustomersComponent,
-    ViewCustomersComponent,
-    LoadingSpinComponent,
-    LoadingSpinPopupComponent
+    ViewCustomersComponent
   ],
   imports: [
     CommonModule,
-    CustomersRoutingModule
+    CustomersRoutingModule,
+    SharedModule
   ]
 })
 export class CustomersModule { }

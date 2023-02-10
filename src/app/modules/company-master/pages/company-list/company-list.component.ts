@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@
 import { Title } from '@angular/platform-browser';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
-import { ConfirmationDialogModalComponent } from 'src/app/shared/components/confirmation-dialog-modal/confirmation-dialog-modal.component';
+import { ConfirmationDialogModalComponent } from 'src/app/modules/shared/components/confirmation-dialog-modal/confirmation-dialog-modal.component';
 import { AddEditeCompanyComponent } from '../../components/add-edite-company/add-edite-company.component';
 import { ViewCompanyComponent } from '../../components/view-company/view-company.component';
 
@@ -25,7 +25,7 @@ export class CompanyListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.isProceess = false;
+    this.isProceess = false;
   }
   onAdd() {
     this.isProceess = true;
