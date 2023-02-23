@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Roles_Permissions } from 'src/app/_models/master';
 
@@ -22,13 +22,30 @@ export class AddUpdateRolesPermissionsComponent {
     private cd: ChangeDetectorRef
   ) {
     this.rolesPermissionsMasterForm = this.formBuilder.group({
-      // Name: ["", [Validators.required, Validators.minLength(3), Validators.pattern(/^(?!.*?[^aeiou]{5})(?!.*?[aeiou]{3})[a-z]*$/)]],
-      // Descirption: ['', [Validators.required]],
-      // ApiKey: ['', [Validators.required]]
+      Name: ["", [Validators.required, Validators.minLength(3), Validators.pattern(/^(?!.*?[^aeiou]{5})(?!.*?[aeiou]{3})[a-z]*$/)]],
+      Descirption: ['', [Validators.required]],
+      ApiKey: ['', [Validators.required]]
     });
   }
 
   onCancel() {
     this.activeModal.dismiss();
+  }
+
+
+  onSubmit() {
+    if (this.rolesPermissionsMasterForm.valid) {
+      console.log(this.rolesPermissionsMasterForm.value);
+
+      // this.activeModal.close(this.companyMasterForm.value)
+    } else {
+      this.rolesPermissionsMasterForm.controls['Name'].markAsTouched();
+      this.rolesPermissionsMasterForm.controls['Descirption'].markAsTouched();
+      this.rolesPermissionsMasterForm.controls['ApiKey'].markAsTouched();
+    }
+  }
+
+  shouldShowError(controlName: string, errorName: string) {
+    return this.rolesPermissionsMasterForm.controls[controlName].touched && this.rolesPermissionsMasterForm.controls[controlName].hasError(errorName);
   }
 }

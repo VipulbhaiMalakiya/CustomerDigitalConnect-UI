@@ -11,12 +11,147 @@
         required=""></div>
   </div>
   <div class="btn-group">
-    <button type="button" (click)="onAdd()" class="add-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button"  class="add-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       Add New
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item"><i class="las la-plus"></i> Create new user</a></li>
+      <li (click)="onAdd()"><a class="dropdown-item"><i class="las la-plus"></i> Create new user</a></li>
       <li><a class="dropdown-item" href="#"><i class="las la-layer-group"></i> Bulk Upload</a></li>
     </ul>
+  </div>
+</div>
+<div class="inner-middle-content">
+  <div class="dasboard-table">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="tcol1">ID</th>
+            <th class="tcol2">Name</th>
+            <th class="tcol3">Description</th>
+            <th class="tcol4">Api Key</th>
+            <th class="action-cl">Action</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="!isProceess">
+
+          <tr>
+            <td>#1cwg-er3f</td>
+            <td>CS Tamanna Chugh</td>
+            <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer
+              took a galley.</td>
+            <td>10671204-740b-4943-aec4</td>
+            <td>
+              <a class="btnClick" (click)="onViewDetail()"><i class="las la-eye"></i></a>
+              <a class="btnClick" href="#"><i class="las la-edit"></i></a>
+              <a class="btnClick" (click)="onDelete()"><i class="las la-trash-alt"></i></a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>#1cwg-er3f</td>
+            <td>CS Tamanna Chugh</td>
+            <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer
+              took a galley.</td>
+            <td>10671204-740b-4943-aec4</td>
+            <td>
+              <a href="#"><i class="las la-eye"></i></a>
+              <a href="#"><i class="las la-edit"></i></a>
+              <a href="#"><i class="las la-trash-alt"></i></a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>#1cwg-er3f</td>
+            <td>CS Tamanna Chugh</td>
+            <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer
+              took a galley.</td>
+            <td>10671204-740b-4943-aec4</td>
+            <td>
+              <a href="#"><i class="las la-eye"></i></a>
+              <a href="#"><i class="las la-edit"></i></a>
+              <a href="#"><i class="las la-trash-alt"></i></a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>#1cwg-er3f</td>
+            <td>CS Tamanna Chugh</td>
+            <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer
+              took a galley.</td>
+            <td>10671204-740b-4943-aec4</td>
+            <td>
+              <a href="#"><i class="las la-eye"></i></a>
+              <a href="#"><i class="las la-edit"></i></a>
+              <a href="#"><i class="las la-trash-alt"></i></a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>#1cwg-er3f</td>
+            <td>CS Tamanna Chugh</td>
+            <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer
+              took a galley.</td>
+            <td>10671204-740b-4943-aec4</td>
+            <td>
+              <a href="#"><i class="las la-eye"></i></a>
+              <a href="#"><i class="las la-edit"></i></a>
+              <a href="#"><i class="las la-trash-alt"></i></a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>#1cwg-er3f</td>
+            <td>CS Tamanna Chugh</td>
+            <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer
+              took a galley.</td>
+            <td>10671204-740b-4943-aec4</td>
+            <td>
+              <a href="#"><i class="las la-eye"></i></a>
+              <a href="#"><i class="las la-edit"></i></a>
+              <a href="#"><i class="las la-trash-alt"></i></a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>#1cwg-er3f</td>
+            <td>CS Tamanna Chugh</td>
+            <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer
+              took a galley.</td>
+            <td>10671204-740b-4943-aec4</td>
+            <td>
+              <a href="#"><i class="las la-eye"></i></a>
+              <a href="#"><i class="las la-edit"></i></a>
+              <a href="#"><i class="las la-trash-alt"></i></a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>#1cwg-er3f</td>
+            <td>CS Tamanna Chugh</td>
+            <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer
+              took a galley.</td>
+            <td>10671204-740b-4943-aec4</td>
+            <td>
+              <a href="#"><i class="las la-eye"></i></a>
+              <a href="#"><i class="las la-edit"></i></a>
+              <a href="#"><i class="las la-trash-alt"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="clearfix" *ngIf="!isProceess">
+      <div class="hint-text">Showing <b>1</b> out of <b>10</b> entries</div>
+      <ul class="pagination">
+        <li class="page-item disabled"><a href="#"><i class="las la-angle-left"></i></a></li>
+        <li class="page-item active"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link"><i class="las la-angle-right"></i></a></li>
+      </ul>
+    </div>
   </div>
 </div>

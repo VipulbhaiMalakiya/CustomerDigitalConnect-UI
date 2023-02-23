@@ -5,6 +5,7 @@ import { RolePermissionsListComponent } from './pages/role-permissions-list/role
 import { AddUpdateRolesPermissionsComponent } from './components/add-update-roles-permissions/add-update-roles-permissions.component';
 import { ViewRolesPermissionsComponent } from './components/view-roles-permissions/view-roles-permissions.component';
 import { SharedModule } from '../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     RolesPermissionsRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class RolesPermissionsModule { }

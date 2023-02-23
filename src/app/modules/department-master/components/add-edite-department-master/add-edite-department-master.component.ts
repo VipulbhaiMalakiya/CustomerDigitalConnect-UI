@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Department } from 'src/app/_models/master';
 
@@ -22,13 +22,30 @@ export class AddEditeDepartmentMasterComponent {
     private cd: ChangeDetectorRef
   ) {
     this.departmentMasterForm = this.formBuilder.group({
-      // Name: ["", [Validators.required, Validators.minLength(3), Validators.pattern(/^(?!.*?[^aeiou]{5})(?!.*?[aeiou]{3})[a-z]*$/)]],
-      // Descirption: ['', [Validators.required]],
-      // ApiKey: ['', [Validators.required]]
+      Name: ["", [Validators.required, Validators.minLength(3), Validators.pattern(/^(?!.*?[^aeiou]{5})(?!.*?[aeiou]{3})[a-z]*$/)]],
+      Descirption: ['', [Validators.required]],
+      ApiKey: ['', [Validators.required]]
     });
   }
 
   onCancel() {
     this.activeModal.dismiss();
+  }
+
+
+  onSubmit() {
+    if (this.departmentMasterForm.valid) {
+      console.log(this.departmentMasterForm.value);
+
+      // this.activeModal.close(this.companyMasterForm.value)
+    } else {
+      this.departmentMasterForm.controls['Name'].markAsTouched();
+      this.departmentMasterForm.controls['Descirption'].markAsTouched();
+      this.departmentMasterForm.controls['ApiKey'].markAsTouched();
+    }
+  }
+
+  shouldShowError(controlName: string, errorName: string) {
+    return this.departmentMasterForm.controls[controlName].touched && this.departmentMasterForm.controls[controlName].hasError(errorName);
   }
 }

@@ -22,13 +22,30 @@ export class AddUpdateApprovalMatrixComponent {
     private cd: ChangeDetectorRef
   ) {
     this.approvalMatrixMasterForm = this.formBuilder.group({
-      // Name: ["", [Validators.required, Validators.minLength(3), Validators.pattern(/^(?!.*?[^aeiou]{5})(?!.*?[aeiou]{3})[a-z]*$/)]],
-      // Descirption: ['', [Validators.required]],
-      // ApiKey: ['', [Validators.required]]
+      Name: ["", [Validators.required, Validators.minLength(3), Validators.pattern(/^(?!.*?[^aeiou]{5})(?!.*?[aeiou]{3})[a-z]*$/)]],
+      Descirption: ['', [Validators.required]],
+      ApiKey: ['', [Validators.required]]
     });
   }
 
   onCancel() {
     this.activeModal.dismiss();
+  }
+
+
+  onSubmit() {
+    if (this.approvalMatrixMasterForm.valid) {
+      console.log(this.approvalMatrixMasterForm.value);
+
+      // this.activeModal.close(this.companyMasterForm.value)
+    } else {
+      this.approvalMatrixMasterForm.controls['Name'].markAsTouched();
+      this.approvalMatrixMasterForm.controls['Descirption'].markAsTouched();
+      this.approvalMatrixMasterForm.controls['ApiKey'].markAsTouched();
+    }
+  }
+
+  shouldShowError(controlName: string, errorName: string) {
+    return this.approvalMatrixMasterForm.controls[controlName].touched && this.approvalMatrixMasterForm.controls[controlName].hasError(errorName);
   }
 }

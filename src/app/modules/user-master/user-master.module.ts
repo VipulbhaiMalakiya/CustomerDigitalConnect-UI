@@ -5,6 +5,7 @@ import { UserListComponent } from './pages/user-list/user-list.component';
 import { AddUpdateUserComponent } from './components/add-update-user/add-update-user.component';
 import { ViewUserComponent } from './components/view-user/view-user.component';
 import { SharedModule } from '../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     UserMasterRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class UserMasterModule { }

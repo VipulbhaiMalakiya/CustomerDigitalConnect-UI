@@ -5,6 +5,7 @@ import { ApprovalMatrixListComponent } from './pages/approval-matrix-list/approv
 import { AddUpdateApprovalMatrixComponent } from './components/add-update-approval-matrix/add-update-approval-matrix.component';
 import { ViewApprovalMatrixComponent } from './components/view-approval-matrix/view-approval-matrix.component';
 import { SharedModule } from '../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     ApprovalMatrixRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class ApprovalMatrixModule { }
